@@ -3,7 +3,7 @@
 > **Option B: Mock Implementation**
 > A high-performance mock execution engine simulating market order routing across Raydium and Meteora on Solana.
 
-## 📋 Overview
+##  Overview
 
 This project implements a backend execution engine that handles **Market Orders** with intelligent routing (Smart Router). It simulates the latency, price variance, and transaction lifecycle of a real Solana DEX interaction without requiring mainnet funds.
 
@@ -15,7 +15,7 @@ This project implements a backend execution engine that handles **Market Orders*
 
 ---
 
-## 🧠 Design Decisions
+##  Design Decisions
 
 ### 1. Why "Market Order"?
 I chose to implement **Market Orders** because they represent the "critical path" for an execution engine. A market order stresses the system's ability to perform immediate routing, slippage calculation, and execution under latency constraints. 
@@ -27,7 +27,7 @@ Instead of maintaining separate REST endpoints for submission and WebSocket endp
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 The system follows a microservices-lite architecture:
 
@@ -38,7 +38,7 @@ The system follows a microservices-lite architecture:
 
 ---
 
-## 🚀 Extensibility Guide
+##  Extensibility Guide
 
 The engine is designed to be easily extended for other order types using the same `ordersQueue`:
 
@@ -54,7 +54,7 @@ The engine is designed to be easily extended for other order types using the sam
 
 ---
 
-## 🛠 Setup & Run
+##  Setup & Run
 
 ### Prerequisites
 *   Node.js 18+
@@ -86,7 +86,7 @@ npm test
 
 ---
 
-## 🧪 Testing Strategy
+##  Testing Strategy
 
 The project includes a suite of **12 Integration Tests** (`tests/engine.test.ts`) covering:
 1.  **Routing Accuracy**: verifying the engine selects the lower price for BUY orders and higher for SELL.
@@ -96,7 +96,7 @@ The project includes a suite of **12 Integration Tests** (`tests/engine.test.ts`
 
 ---
 
-## 📦 API Reference
+##  API Reference
 
 ### Execute Order
 `POST /api/orders/execute` (Connection: Upgrade)
@@ -120,6 +120,6 @@ The project includes a suite of **12 Integration Tests** (`tests/engine.test.ts`
 
 ---
 
-## 🔗 Resources
+##  Resources
 *   [Raydium SDK](https://github.com/raydium-io/raydium-sdk-V2-demo)
 *   [Meteora Docs](https://docs.meteora.ag/)
