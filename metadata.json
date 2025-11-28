@@ -1,0 +1,5 @@
+{
+  "name": "DEX Order Executor",
+  "description": "A high-performance mock execution engine interface visualizing market order routing across Raydium and Meteora with real-time WebSocket updates.",
+  "requestFramePermissions": []
+}
